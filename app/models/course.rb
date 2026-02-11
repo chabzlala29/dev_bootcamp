@@ -6,6 +6,6 @@ class Course < ApplicationRecord
   end
 
   def self.ransackable_attributes(auth_object = nil)
-    ["created_at", "description", "id", "id_value", "published", "title", "updated_at"]
+    %w[created_at description id id_value published title updated_at]
   end
 end
