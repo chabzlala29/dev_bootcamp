@@ -21,11 +21,15 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+  
+    <%= railsui_head %>
+</head>
 
   <body>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
-  </body>
+  
+    <%= railsui_launcher if Rails.env.development? %>
+</body>
 </html>
