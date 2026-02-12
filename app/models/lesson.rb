@@ -2,6 +2,9 @@ class Lesson < ApplicationRecord
   belongs_to :course
   has_many :lesson_progresses, dependent: :destroy
 
+  validates :title, presence: true
+  validates :content, presence: true
+
   def self.ransackable_attributes(auth_object = nil)
     %w[content course_id created_at free id id_value position title updated_at]
   end

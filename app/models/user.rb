@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   enum :role, { student: 0, admin: 1 }
 
-  has_many :lesson_progresses
+  has_many :lesson_progresses, dependent: :destroy
   has_many :completed_lessons, through: :lesson_progresses, source: :lesson
 
   def self.ransackable_attributes(auth_object = nil)
