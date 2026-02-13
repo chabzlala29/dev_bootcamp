@@ -544,8 +544,8 @@ DEPENDENCIES
   puma (>= 5.0)
   pundit
   rails (~> 8.1.2)
-  rspec-rails
   railsui (~> 3.4)
+  rspec-rails
   rubocop-rails-omakase
   sassc-rails (~> 2.1)
   selenium-webdriver
