@@ -83,3 +83,5 @@ end
 gem "sprockets-rails", "~> 3.5"
 
 gem "sassc-rails", "~> 2.1"
+
+gem "railsui", "~> 3.4"
