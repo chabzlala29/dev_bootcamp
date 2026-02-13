@@ -1,6 +1,8 @@
 class Course < ApplicationRecord
   has_many :lessons, -> { order(:position) }, dependent: :destroy
 
+  validates :title, presence: true
+
   def self.ransackable_associations(auth_object = nil)
     ["lessons"]
   end
